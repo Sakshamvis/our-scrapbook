@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import BookPage from '../BookPage';
 import { useEasterEggs } from '../../../context/EasterEggContext';
 import SmartPhoto from '../../UI/SmartPhoto';
+import { assetUrl } from '../../../utils/assetUrl';
 
 export const PageThree = React.forwardRef((props, ref) => {
   const { clickStar } = useEasterEggs();
@@ -36,7 +37,7 @@ export const PageThree = React.forwardRef((props, ref) => {
           
           {/* Polaroid 1 (Top Left - 8th March Elevator Selfie) */}
           <SmartPhoto 
-            src="/photos/trip_elevator.png"
+            src={assetUrl('/photos/trip_elevator.png')}
             caption="08 March 2026"
             rotation="-5deg"
             className="absolute top-[6%] left-[4%] w-[155px] z-10"
@@ -46,7 +47,7 @@ export const PageThree = React.forwardRef((props, ref) => {
 
           {/* Polaroid 2 (Top Right - 8th March Selfie close-up 1) */}
           <SmartPhoto 
-            src="/photos/trip_selfie_1.png"
+            src={assetUrl('/photos/trip_selfie_1.png')}
             caption="08 March 2026"
             rotation="6deg"
             className="absolute top-[14%] right-[3%] w-[130px] z-20"
@@ -56,7 +57,7 @@ export const PageThree = React.forwardRef((props, ref) => {
 
           {/* Polaroid 3 (Bottom Left Overlapping - 8th March Selfie close-up 2) */}
           <SmartPhoto 
-            src="/photos/trip_selfie_2.png"
+            src={assetUrl('/photos/trip_selfie_2.png')}
             caption="08 March 2026"
             rotation="-6deg"
             className="absolute bottom-[8%] left-[8%] w-[135px] z-30"

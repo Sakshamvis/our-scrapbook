@@ -8,7 +8,7 @@ export default function App() {
   return (
     <AudioProvider>
       <EasterEggProvider>
-        <Router>
+        <Router basename={import.meta.env.BASE_URL.replace(/\/$/, '')}>
           <Routes>
             <Route path="/" element={<Home />} />
           </Routes>

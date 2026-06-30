@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
 import { useAudio } from '../../context/AudioContext';
 import SmartPhoto from '../UI/SmartPhoto';
+import { assetUrl } from '../../utils/assetUrl';
 
 const DUST_PARTICLES = Array.from({ length: 15 }).map((_, i) => ({
   id: i,
@@ -192,7 +193,7 @@ export default function Cover({ onOpen }) {
           </div>
           {/* Polaroid Decoration (Right) */}
           <SmartPhoto 
-            src="/photos/cover_pic.jpg"
+            src={assetUrl('/photos/cover_pic.jpg')}
             caption="Our Memories"
             rotation="10deg"
             className="absolute top-8 right-8 w-24 z-20"
@@ -201,7 +202,7 @@ export default function Cover({ onOpen }) {
 
           {/* Polaroid Decoration (Top Left) */}
           <SmartPhoto 
-            src="/photos/cover_left_pic.jpg"
+            src={assetUrl('/photos/cover_left_pic.jpg')}
             caption="Moments"
             rotation="-8deg"
             className="absolute top-8 left-8 w-24 z-20"

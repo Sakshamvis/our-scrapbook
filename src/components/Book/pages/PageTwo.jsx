@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import BookPage from '../BookPage';
 import { useEasterEggs } from '../../../context/EasterEggContext';
 import SmartPhoto from '../../UI/SmartPhoto';
+import { assetUrl } from '../../../utils/assetUrl';
 
 export const PageTwo = React.forwardRef((props, ref) => {
   const { triggerDateCounter } = useEasterEggs();
@@ -41,7 +42,7 @@ export const PageTwo = React.forwardRef((props, ref) => {
             </div>
 
             <SmartPhoto 
-              src="/photos/trip_car.png"
+              src={assetUrl('/photos/trip_car.png')}
               caption="07 March 2026"
               rotation="5deg"
               className="w-[128px] flex-shrink-0 -mt-1"
@@ -53,7 +54,7 @@ export const PageTwo = React.forwardRef((props, ref) => {
           {/* Bottom row: March 8 polaroids */}
           <div className="relative flex-1 mt-3 min-h-[210px]">
             <SmartPhoto 
-              src="/photos/trip_march8_1.jpg"
+              src={assetUrl('/photos/trip_march8_1.jpg')}
               caption="08 March 2026"
               rotation="-4deg"
               className="absolute bottom-[14%] left-[2%] w-[128px] z-20"
@@ -61,7 +62,7 @@ export const PageTwo = React.forwardRef((props, ref) => {
             />
 
             <SmartPhoto 
-              src="/photos/trip_march8_2.jpg"
+              src={assetUrl('/photos/trip_march8_2.jpg')}
               caption="08 March 2026"
               rotation="7deg"
               className="absolute bottom-[8%] right-[2%] w-[132px] z-20"

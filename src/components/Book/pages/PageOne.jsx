@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import BookPage from '../BookPage';
 import { useEasterEggs } from '../../../context/EasterEggContext';
 import SmartPhoto from '../../UI/SmartPhoto';
+import { assetUrl } from '../../../utils/assetUrl';
 
 export const PageOne = React.forwardRef((props, ref) => {
   const { triggerCompliment, toggleNightMode, clickStar } = useEasterEggs();
@@ -117,7 +118,7 @@ export const PageOne = React.forwardRef((props, ref) => {
         style={{ transformOrigin: 'center center' }}
       >
         <SmartPhoto 
-          src="/photos/first_pic.jpg"
+          src={assetUrl('/photos/first_pic.jpg')}
           caption="Where it all began... (02 Feb 2025)"
           rotation="0deg"
           className="w-[135px] pointer-events-auto"

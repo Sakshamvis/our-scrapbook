@@ -1,5 +1,6 @@
 import React from 'react';
 import SmartPhoto from '../../UI/SmartPhoto';
+import { assetUrl } from '../../../utils/assetUrl';
 
 export const CoverPage = React.forwardRef((props, ref) => {
   return (
@@ -27,7 +28,7 @@ export const CoverPage = React.forwardRef((props, ref) => {
 
       {/* Polaroid Decoration (Right) */}
       <SmartPhoto 
-        src="/photos/cover_pic.jpg"
+        src={assetUrl('/photos/cover_pic.jpg')}
         caption="Our Memories"
         rotation="10deg"
         className="absolute top-10 right-10 w-24"
@@ -36,7 +37,7 @@ export const CoverPage = React.forwardRef((props, ref) => {
 
       {/* Polaroid Decoration (Top Left) */}
       <SmartPhoto 
-        src="/photos/cover_left_pic.jpg"
+        src={assetUrl('/photos/cover_left_pic.jpg')}
         caption="Moments"
         rotation="-8deg"
         className="absolute top-10 left-10 w-24"

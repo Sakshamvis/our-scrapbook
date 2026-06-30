@@ -1,5 +1,6 @@
 /* eslint-disable react-refresh/only-export-components */
 import React, { createContext, useContext, useRef, useState, useEffect } from 'react';
+import { assetUrl } from '../utils/assetUrl';
 
 const AudioContext = createContext(null);
 
@@ -152,7 +153,7 @@ export function AudioProvider({ children }) {
 
   // Initialize background audio element on mount with immediate & fallback autoplay
   useEffect(() => {
-    const audio = new Audio('/music/TURNING_PAGE_-_SLEEPING_AT_LAST_host.ru_(mp3.pm).mp3');
+    const audio = new Audio(assetUrl('/music/TURNING_PAGE_-_SLEEPING_AT_LAST_host.ru_(mp3.pm).mp3'));
     audio.loop = true;
     audio.volume = 0.2;
     bgAudioRef.current = audio;
