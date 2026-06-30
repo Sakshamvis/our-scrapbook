@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #F8F3E9;
+  --color-paperLight: #FFFDF8;
+  --color-pink: #F8C8DC;
+  --color-brown: #8B5E3C;
+  --color-gold: #D4AF37;
+  --color-textDark: #4A403A;
+
+  --font-sans: 'Poppins', sans-serif;
+  --font-caveat: 'Caveat', cursive;
+  --font-patrick: 'Patrick Hand', cursive;
+}
+
+/* Reset margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Body background and base styling */
+body {
+  background-color: var(--color-paper);
+  color: var(--color-textDark);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Nice selection color */
+::selection {
+  background-color: var(--color-pink);
+  color: var(--color-textDark);
+}
+
+::-moz-selection {
+  background-color: var(--color-pink);
+  color: var(--color-textDark);
+}
